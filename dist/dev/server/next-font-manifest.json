@@ -1,0 +1,11 @@
+{
+  "app": {
+    "[project]/app/page": [
+      "static/media/GlacialIndifference_Regular-s.p.0lb4npa_siebq.otf",
+      "static/media/GlacialIndifference_Bold-s.p.0rlhx3rj6mxfz.otf"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}

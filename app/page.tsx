@@ -34,13 +34,13 @@ export default function Home() {
 
         <div className="mt-4">
           <Link
-            href="https://playtosky.com/"
+            href="https://www.playtosky.com/"
             className="group flex items-center gap-2 text-xs md:text-sm text-gray-500 hover:text-white transition-colors duration-300"
           >
             <span className="transition-transform duration-300 group-hover:-translate-x-1">
               ←
             </span>
-            Back to Play To Sky Portal
+            Back to Play To Sky
           </Link>
         </div>
       </div>
