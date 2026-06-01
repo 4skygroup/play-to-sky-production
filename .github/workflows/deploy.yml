@@ -33,7 +33,7 @@ jobs:
           script: |
             sudo mkdir -p /var/www/playtoskyproductions.com
 
-            if [ ! -f /etc/nginx/sites-available/playtoskyproductions.com ]; then
+            if [ ! -d /etc/letsencrypt/live/playtoskyproductions.com ]; then
               sudo tee /etc/nginx/sites-available/playtoskyproductions.com > /dev/null <<'NGINXEOF'
             server {
                 server_name playtoskyproductions.com www.playtoskyproductions.com;
@@ -51,15 +51,13 @@ jobs:
                 listen [::]:80;
             }
             NGINXEOF
-            fi
-
-            if [ ! -L /etc/nginx/sites-enabled/playtoskyproductions.com ]; then
-              sudo ln -s /etc/nginx/sites-available/playtoskyproductions.com /etc/nginx/sites-enabled/playtoskyproductions.com
-            fi
-
-            if [ ! -d /etc/letsencrypt/live/playtoskyproductions.com ]; then
+              sudo ln -sf /etc/nginx/sites-available/playtoskyproductions.com /etc/nginx/sites-enabled/playtoskyproductions.com
               sudo certbot --nginx -d playtoskyproductions.com -d www.playtoskyproductions.com \
                 --non-interactive --agree-tos -m ${{ secrets.CERTBOT_EMAIL }}
+            else
+              if [ ! -L /etc/nginx/sites-enabled/playtoskyproductions.com ]; then
+                sudo ln -s /etc/nginx/sites-available/playtoskyproductions.com /etc/nginx/sites-enabled/playtoskyproductions.com
+              fi
             fi
 
             sudo nginx -t && sudo systemctl reload nginx
