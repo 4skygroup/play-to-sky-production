@@ -33,7 +33,7 @@ jobs:
           script: |
             sudo mkdir -p /var/www/playtoskyproductions.com
 
-            # Premier deploiement : obtenir le certificat SSL via Certbot (sans toucher au config Nginx)
+            # Etape A : obtenir le certificat SSL si absent
             if [ ! -d /etc/letsencrypt/live/playtoskyproductions.com ]; then
               sudo tee /etc/nginx/sites-available/playtoskyproductions.com > /dev/null <<'TMPEOF'
             server {
@@ -47,12 +47,14 @@ jobs:
                 sudo ln -s /etc/nginx/sites-available/playtoskyproductions.com /etc/nginx/sites-enabled/playtoskyproductions.com
               fi
               sudo nginx -t && sudo systemctl reload nginx
-              sudo certbot certonly --nginx -d playtoskyproductions.com -d www.playtoskyproductions.com \
+              sudo certbot certonly --nginx \
+                -d playtoskyproductions.com -d www.playtoskyproductions.com \
                 --non-interactive --agree-tos -m ${{ secrets.CERTBOT_EMAIL }}
             fi
 
-            # Ecrire le config SSL complet (a chaque deploiement)
-            sudo tee /etc/nginx/sites-available/playtoskyproductions.com > /dev/null <<'NGINXEOF'
+            # Etape B : ecrire le config SSL complet SEULEMENT si le cert existe
+            if [ -d /etc/letsencrypt/live/playtoskyproductions.com ]; then
+              sudo tee /etc/nginx/sites-available/playtoskyproductions.com > /dev/null <<'NGINXEOF'
             server {
                 server_name playtoskyproductions.com www.playtoskyproductions.com;
                 limit_req zone=mylimit burst=20 nodelay;
@@ -86,6 +88,7 @@ jobs:
                 return 404;
             }
             NGINXEOF
+            fi
 
             if [ ! -L /etc/nginx/sites-enabled/playtoskyproductions.com ]; then
               sudo ln -s /etc/nginx/sites-available/playtoskyproductions.com /etc/nginx/sites-enabled/playtoskyproductions.com
