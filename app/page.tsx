@@ -3,46 +3,84 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex-1 flex flex-col items-center justify-center relative px-4 overflow-hidden">
+    <div className="flex-1 flex flex-col items-center justify-center relative px-6 overflow-hidden">
 
-      {/* --- Le Logo (poussé vers le haut) --- */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
-        <Image
-          src="/logo.png"
-          alt="Play To Sky Productions Background Logo"
-          width={2500}
-          height={2500}
-          priority
-          quality={100}
-          style={{ width: "auto", height: "auto" }}
-          /* Le retour du -translate-y-24 pour remonter le logo */
-          className="w-auto h-auto max-w-screen sm:max-w-[90vw] md:max-w-[100vw] lg:max-w-[130vw] xl:max-w-[180vw] object-contain transform -translate-y-24"
-        />
-      </div>
+      {/* Radial spotlight */}
+      <div
+        className="absolute inset-0 pointer-events-none z-0"
+        style={{ background: "radial-gradient(ellipse 75% 60% at 50% 45%, rgba(255,255,255,0.04) 0%, transparent 70%)" }}
+      />
 
-      {/* --- Le Texte (poussé vers le bas) --- */}
-      {/* J'ai remis translate-y-32 pour le décaler vers le bas et fuir le bloc du logo */}
-      <div className="z-10 text-center flex flex-col items-center gap-6 w-full max-w-7xl mx-auto transform translate-y-32">
+      {/* Corner frames - draw in after content */}
+      <div className="absolute top-5 left-5 md:top-8 md:left-8 border-l border-t border-white/10 pointer-events-none z-0 corner-frame" style={{ "--reveal-delay": "700ms" } as React.CSSProperties} />
+      <div className="absolute top-5 right-5 md:top-8 md:right-8 border-r border-t border-white/10 pointer-events-none z-0 corner-frame" style={{ "--reveal-delay": "750ms" } as React.CSSProperties} />
+      <div className="absolute bottom-5 left-5 md:bottom-8 md:left-8 border-l border-b border-white/10 pointer-events-none z-0 corner-frame" style={{ "--reveal-delay": "800ms" } as React.CSSProperties} />
+      <div className="absolute bottom-5 right-5 md:bottom-8 md:right-8 border-r border-b border-white/10 pointer-events-none z-0 corner-frame" style={{ "--reveal-delay": "850ms" } as React.CSSProperties} />
 
-        <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl tracking-wide text-center leading-tight px-4 lg:whitespace-nowrap">
-          Movies Production Society
-        </h1>
+      {/* Main content */}
+      <div className="z-10 flex flex-col items-center text-center w-full max-w-6xl mx-auto">
 
-        <p className="text-gray-400 text-xs sm:text-sm md:text-base font-light uppercase tracking-widest mt-2">
-          Coming Soon
+        {/* Label */}
+        <div
+          className="reveal flex items-center gap-3 md:gap-4 mb-8 md:mb-10"
+          style={{ "--reveal-delay": "0ms" } as React.CSSProperties}
+        >
+        </div>
+
+        {/* Hero typography */}
+        <div
+          className="reveal"
+          style={{ "--reveal-delay": "120ms" } as React.CSSProperties}
+        >
+          <h1
+            className="font-bold uppercase leading-[0.88] tracking-[-0.02em]"
+            style={{ fontSize: "clamp(3.5rem, 10vw, 6rem)" }}
+          >
+            <span className="block text-white">Coming</span>
+            <span
+              className="block text-transparent outline-breathe"
+              style={{ WebkitTextStroke: "1.5px rgba(255,255,255,0.25)" }}
+            >
+              Soon
+            </span>
+          </h1>
+        </div>
+
+        {/* Logo */}
+        <div
+          className="reveal mb-5 md:mb-6"
+          style={{ "--reveal-delay": "360ms" } as React.CSSProperties}
+        >
+          <img
+            src="/logo.png"
+            alt="Play To Sky Production"
+            width={500}
+            // height={200}
+            className="object-contain opacity-60 w-28 sm:w-32 md:w-40 h-auto logo-float"
+          />
+        </div>
+
+        {/* Tagline */}
+        <p
+          className="reveal text-white/35 uppercase tracking-[0.3em] sm:tracking-[0.35em] text-[9px] sm:text-[10px] md:text-xs"
+          style={{ "--reveal-delay": "480ms" } as React.CSSProperties}
+        >
+          Podcasts&nbsp;&nbsp;·&nbsp;&nbsp;Interviews&nbsp;&nbsp;·&nbsp;&nbsp;Journalism
         </p>
 
-        <div className="mt-4">
+        {/* Links */}
+        <div
+          className="reveal mt-10 md:mt-14 flex flex-col items-center gap-6"
+          style={{ "--reveal-delay": "560ms" } as React.CSSProperties}
+        >
           <Link
-            href="https://www.playtosky.com/"
-            className="group flex items-center gap-2 text-xs md:text-sm text-gray-500 hover:text-white transition-colors duration-300"
+            href="https://playtosky.com/"
+            className="inline-flex items-center px-8 py-3 border border-white/25 text-[9px] sm:text-[10px] tracking-[0.35em] uppercase text-white/50 hover:bg-white hover:text-black hover:border-white transition-all duration-500 cursor-pointer"
           >
-            <span className="transition-transform duration-300 group-hover:-translate-x-1">
-              ←
-            </span>
             Back to Play To Sky
           </Link>
         </div>
+
       </div>
 
     </div>

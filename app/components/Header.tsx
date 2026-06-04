@@ -11,9 +11,9 @@ export default function Header() {
 
     const navLinks = [
         { name: 'The Group', href: "https://playtosky.com/" },
-        { name: 'About', href: '#' },
-        { name: 'Careers', href: '#' },
-        { name: 'Contact', href: '#' },
+        { name: 'About', href: '/about' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Contact', href: '/contact' },
     ];
 
     return (
@@ -32,14 +32,31 @@ export default function Header() {
                 </Link>
             </div>
 
-            {/* Navigation Desktop */}
-            <nav className="hidden md:flex gap-8 text-xs tracking-wider">
-                {navLinks.map((link) => (
-                    <Link key={link.name} href={link.href} className="text-white hover:text-slate-400 transition-colors">
-                        {link.name}
-                    </Link>
-                ))}
-            </nav>
+    {/* NAVIGATION DESKTOP */}
+      <nav className="hidden md:flex gap-8 text-xs tracking-wider">
+          {navLinks.map((link) => (
+              link.href.startsWith('http') ? (
+                  <a
+                      key={link.name}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white hover:text-white/50 transition-colors"
+                  >
+                      {link.name}
+                  </a>
+              ) : (
+                  <Link
+                      key={link.name}
+                      href={link.href}
+                      className="text-white hover:text-white/50 transition-colors"
+                  >
+                      {link.name}
+                  </Link>
+              )
+          ))}
+      </nav>
+
 
             <button
                 onClick={toggleMenu}
@@ -55,14 +72,27 @@ export default function Header() {
             <div className={`fixed inset-0 bg-black z-105 flex flex-col items-center justify-center transition-transform duration-500 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                 <nav className="flex flex-col gap-10 text-center">
                     {navLinks.map((link) => (
-                        <Link
-                            key={link.name}
-                            href={link.href}
-                            onClick={toggleMenu}
-                            className="text-3xl font-bold text-white tracking-widest hover:scale-110 transition-transform"
-                        >
-                            {link.name}
-                        </Link>
+                        link.href.startsWith('http') ? (
+                            <a
+                                key={link.name}
+                                href={link.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={toggleMenu}
+                                className="text-3xl font-normal text-white tracking-widest hover:scale-110 transition-transform"
+                            >
+                                {link.name}
+                            </a>
+                        ) : (
+                            <Link
+                                key={link.name}
+                                href={link.href}
+                                onClick={toggleMenu}
+                                className="text-3xl font-normal text-white tracking-widest hover:scale-110 transition-transform"
+                            >
+                                {link.name}
+                            </Link>
+                        )
                     ))}
                 </nav>
 

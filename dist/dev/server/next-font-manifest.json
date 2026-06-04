@@ -1,5 +1,21 @@
 {
   "app": {
+    "[project]/app/_not-found/page": [
+      "static/media/GlacialIndifference_Regular-s.p.0lb4npa_siebq.otf",
+      "static/media/GlacialIndifference_Bold-s.p.0rlhx3rj6mxfz.otf"
+    ],
+    "[project]/app/about/page": [
+      "static/media/GlacialIndifference_Regular-s.p.0lb4npa_siebq.otf",
+      "static/media/GlacialIndifference_Bold-s.p.0rlhx3rj6mxfz.otf"
+    ],
+    "[project]/app/careers/page": [
+      "static/media/GlacialIndifference_Regular-s.p.0lb4npa_siebq.otf",
+      "static/media/GlacialIndifference_Bold-s.p.0rlhx3rj6mxfz.otf"
+    ],
+    "[project]/app/contact/page": [
+      "static/media/GlacialIndifference_Regular-s.p.0lb4npa_siebq.otf",
+      "static/media/GlacialIndifference_Bold-s.p.0rlhx3rj6mxfz.otf"
+    ],
     "[project]/app/page": [
       "static/media/GlacialIndifference_Regular-s.p.0lb4npa_siebq.otf",
       "static/media/GlacialIndifference_Bold-s.p.0rlhx3rj6mxfz.otf"
