@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {"timestamp":"00:00:15.939","source":"Server","level":"LOG","message":""}
 {"timestamp":"00:00:17.747","source":"Server","level":"WARN","message":"Image with src \"/logo.png\" is using quality \"100\" which is not configured in images.qualities [75]. Please update your config to [100, 75].\nRead more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities"}
 {"timestamp":"00:00:19.153","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
@@ -29,3 +30,11 @@
 {"timestamp":"03:54:03.519","source":"Server","level":"LOG","message":"✓ Compiled in 201ms"}
 {"timestamp":"03:54:20.286","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
 {"timestamp":"03:54:35.042","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+=======
+{"timestamp":"00:00:00.606","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:04.053","source":"Server","level":"WARN","message":"Image with src \"/logo.png\" is using quality \"100\" which is not configured in images.qualities [75]. Please update your config to [100, 75].\nRead more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities"}
+{"timestamp":"00:00:04.171","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:00:04.200","source":"Browser","level":"WARN","message":"Image with src \"/logo.png\" is using quality \"100\" which is not configured in images.qualities [75]. Please update your config to [100, 75].\nRead more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities"}
+{"timestamp":"00:00:04.226","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mImage with src \\\"/logo.png\\\" is using quality \\\"100\\\" which is not configured in images.qualities [75]. Please update your config to [100, 75].\\nRead more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities\\u001b[39m\" \"\\u001b[2m(file://C:/4 SKY GROUP/play-to-sky-production/dist/dev/static/chunks/node_modules_next_dist_115brz8._.js:2477:13)\\u001b[22m\""}
+{"timestamp":"00:00:04.226","source":"Browser","level":"WARN","message":"\u001b[33mImage with src \"/logo.png\" is using quality \"100\" which is not configured in images.qualities [75]. Please update your config to [100, 75].\nRead more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities\u001b[39m"}
+>>>>>>> c6083495b9bd6a725f984e55323032f1269d3fda

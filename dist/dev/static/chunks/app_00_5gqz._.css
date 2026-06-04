@@ -43,10 +43,10 @@
       --tw-rotate-z: initial;
       --tw-skew-x: initial;
       --tw-skew-y: initial;
-      --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-tracking: initial;
+<<<<<<< HEAD
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
       --tw-shadow-alpha: 100%;
@@ -61,6 +61,8 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+=======
+>>>>>>> c6083495b9bd6a725f984e55323032f1269d3fda
       --tw-duration: initial;
       --tw-ease: initial;
     }
@@ -73,7 +75,10 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+<<<<<<< HEAD
     --color-blue-500: #3080ff;
+=======
+>>>>>>> c6083495b9bd6a725f984e55323032f1269d3fda
     --color-slate-400: #90a1b9;
     --color-gray-400: #99a1af;
     --color-gray-500: #6a7282;
@@ -104,7 +109,10 @@
     --tracking-wider: .05em;
     --tracking-widest: .1em;
     --leading-tight: 1.25;
+<<<<<<< HEAD
     --radius-lg: .5rem;
+=======
+>>>>>>> c6083495b9bd6a725f984e55323032f1269d3fda
     --ease-in-out: cubic-bezier(.4, 0, .2, 1);
     --default-transition-duration: .15s;
     --default-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
@@ -114,7 +122,10 @@
 
   @supports (color: lab(0% 0 0)) {
     :root, :host {
+<<<<<<< HEAD
       --color-blue-500: lab(54.1736% 13.3368 -74.6839);
+=======
+>>>>>>> c6083495b9bd6a725f984e55323032f1269d3fda
       --color-slate-400: lab(65.5349% -2.25151 -14.5072);
       --color-gray-400: lab(65.9269% -.832707 -8.17474);
       --color-gray-500: lab(47.7841% -.393212 -10.0268);
@@ -391,6 +402,7 @@
     inset: calc(var(--spacing) * 0);
   }
 
+<<<<<<< HEAD
   .inset-y-0 {
     inset-block: calc(var(--spacing) * 0);
   }
@@ -411,14 +423,19 @@
     bottom: calc(var(--spacing) * 5);
   }
 
+=======
+>>>>>>> c6083495b9bd6a725f984e55323032f1269d3fda
   .bottom-12 {
     bottom: calc(var(--spacing) * 12);
   }
 
+<<<<<<< HEAD
   .left-5 {
     left: calc(var(--spacing) * 5);
   }
 
+=======
+>>>>>>> c6083495b9bd6a725f984e55323032f1269d3fda
   .z-0 {
     z-index: 0;
   }
@@ -451,6 +468,7 @@
     margin-top: calc(var(--spacing) * 4);
   }
 
+<<<<<<< HEAD
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
   }
@@ -467,22 +485,23 @@
     display: block;
   }
 
+=======
+>>>>>>> c6083495b9bd6a725f984e55323032f1269d3fda
   .flex {
     display: flex;
-  }
-
-  .grid {
-    display: grid;
   }
 
   .hidden {
     display: none;
   }
 
+<<<<<<< HEAD
   .inline-flex {
     display: inline-flex;
   }
 
+=======
+>>>>>>> c6083495b9bd6a725f984e55323032f1269d3fda
   .h-0\.5 {
     height: calc(var(--spacing) * .5);
   }
@@ -519,10 +538,13 @@
     max-width: var(--container-6xl);
   }
 
+<<<<<<< HEAD
   .max-w-7xl {
     max-width: var(--container-7xl);
   }
 
+=======
+>>>>>>> c6083495b9bd6a725f984e55323032f1269d3fda
   .max-w-17\.5 {
     max-width: calc(var(--spacing) * 17.5);
   }
@@ -596,6 +618,7 @@
     cursor: pointer;
   }
 
+<<<<<<< HEAD
   .resize-none {
     resize: none;
   }
@@ -608,6 +631,8 @@
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
+=======
+>>>>>>> c6083495b9bd6a725f984e55323032f1269d3fda
   .flex-col {
     flex-direction: column;
   }
@@ -658,6 +683,7 @@
 
   .overflow-hidden {
     overflow: hidden;
+<<<<<<< HEAD
   }
 
   .rounded-lg {
@@ -719,6 +745,10 @@
     }
   }
 
+=======
+  }
+
+>>>>>>> c6083495b9bd6a725f984e55323032f1269d3fda
   .bg-black {
     background-color: var(--color-black);
   }
@@ -915,6 +945,7 @@
     }
   }
 
+<<<<<<< HEAD
   .text-white\/90 {
     color: #ffffffe6;
   }
@@ -925,6 +956,8 @@
     }
   }
 
+=======
+>>>>>>> c6083495b9bd6a725f984e55323032f1269d3fda
   .uppercase {
     text-transform: uppercase;
   }
@@ -948,6 +981,7 @@
     opacity: 0;
   }
 
+<<<<<<< HEAD
   .opacity-60 {
     opacity: .6;
   }
@@ -957,6 +991,8 @@
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
 
+=======
+>>>>>>> c6083495b9bd6a725f984e55323032f1269d3fda
   .transition-all {
     transition-property: all;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -1322,12 +1358,6 @@
   inherits: false
 }
 
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-
 @property --tw-leading {
   syntax: "*";
   inherits: false
@@ -1343,6 +1373,7 @@
   inherits: false
 }
 
+<<<<<<< HEAD
 @property --tw-shadow {
   syntax: "*";
   inherits: false;
@@ -1422,6 +1453,8 @@
   initial-value: 0 0 #0000;
 }
 
+=======
+>>>>>>> c6083495b9bd6a725f984e55323032f1269d3fda
 @property --tw-duration {
   syntax: "*";
   inherits: false
