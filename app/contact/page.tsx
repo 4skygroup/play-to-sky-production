@@ -24,12 +24,12 @@ const contactSchema = {
     "@type": "ContactPage",
     name: "Contact Play To Sky Production",
     description: "Get in touch with Play To Sky Production. We are always looking to connect with visionary talents, creators, and innovative brand partners.",
-    url: "https://playtoskyproductions/contact",
+    url: "https://playtoskyproductions.com/contact",
     breadcrumb: {
         "@type": "BreadcrumbList",
         itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://playtoskyproductions" },
-            { "@type": "ListItem", position: 2, name: "Contact Us", item: "https://playtoskyproductions/contact" },
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://playtoskyproductions.com" },
+            { "@type": "ListItem", position: 2, name: "Contact Us", item: "https://playtoskyproductions.com/contact" },
         ],
     },
 };
@@ -61,7 +61,7 @@ export default function Contact() {
                     {/* CÔTÉ GAUCHE : Énorme Logo textuel centré verticalement */}
                     <div className="md:col-span-5 flex justify-center items-center p-4">
                         <Image
-                            src="https://playtoskyproductions/logo.png"
+                            src="https://playtoskyproductions.com/logo.png"
                             alt="Logo Play To Sky Production"
                             width={350}
                             height={150}
