@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { MapPin } from 'lucide-react';
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +20,7 @@ export default function Header() {
     return (
         <header className="flex justify-between items-center px-6 md:px-12 py-2 w-full mx-auto relative z-100">
             {/* Logo /Home */}
-            <div className="shrink-0">
+            <div className="shrink-0 flex gap-6">
                 <Link href="/">
                     <Image
                         src="logo-play-to-sky-production.png"
@@ -29,6 +30,12 @@ export default function Header() {
                         unoptimized
                         className="object-contain w-auto h-auto max-w-17.5 md:max-w-21.25 scale-150 cursor-pointer"
                     />
+                </Link>
+                <Link
+                    href="/location"
+                    className="hidden md:flex items-center gap-2 text-white hover:text-seofy-green transition-colors"
+                >
+                    <MapPin className="w-5 h-5" />
                 </Link>
             </div>
 

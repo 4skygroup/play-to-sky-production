@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/Header";
+import Footer from "./components/footer/Footer";
+import { policy } from "@/utils/constants/policy";
+import { services } from "@/utils/constants/service";
 
 const glacialIndifference = localFont({
   src: [
@@ -38,11 +41,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" className={glacialIndifference.variable}>
-      <body className={`${glacialIndifference.className} bg-black text-white h-dvh flex flex-col antialiased overflow-hidden`}>
+      <body className={`${glacialIndifference.className} bg-black text-white min-h-dvh flex flex-col antialiased`}>
         <Header />
-        <main className="grow flex flex-col relative overflow-hidden">
+        <main className="grow flex flex-col relative">
           {children}
         </main>
+        {/* <Footer policy={policy} services={services}/> */}
       </body>
     </html>
   );

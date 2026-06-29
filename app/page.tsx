@@ -51,11 +51,11 @@ export default function Home() {
           className="reveal mb-5 md:mb-6"
           style={{ "--reveal-delay": "360ms" } as React.CSSProperties}
         >
-          <img
+          <Image
             src="/logo.png"
             alt="Play To Sky Production"
             width={500}
-            // height={200}
+            height={80}
             className="object-contain opacity-60 w-28 sm:w-32 md:w-40 h-auto logo-float"
           />
         </div>
