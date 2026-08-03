@@ -37,7 +37,7 @@ const contactSchema = {
 export default function Contact() {
 
     return (
-        <div className="w-full min-h-[calc(90vh-100px)] bg-linear-to-b from-pulse-pink via-pulse-pink/90 to-pulse-pink/40 py-3 px-4 md:px-8 flex items-center justify-center border-t border-b border-white">
+        <div className="w-full min-h-[calc(90vh-100px)] bg-linear-to-b from-pulse-pink via-pulse-pink/90 to-pulse-pink/40 py-12 md:py-20 px-4 md:px-8 flex flex-col md:justify-center border-t border-b border-white overflow-y-auto">            
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
@@ -45,11 +45,6 @@ export default function Contact() {
 
             {/* Cadre principal arrondi de la maquette */}
             <div className="max-w-6xl w-full mx-auto bg-black/10 backdrop-blur-md p-4 md:p-4 shadow-sm border border-white mt-6 relative">
-
-                {/* Titre de la page */}
-                {/* <h1 className="text-3xl md:text-4xl text-center uppercase tracking-wide mb-2 text-white drop-shadow-sm">
-                    Contact us
-                </h1> */}
 
                 <h1 className="text-2xl md:text-3xl text-right mb-8 tracking-wide text-white drop-shadow-sm">
                     Let&apos;s start your strategy !
