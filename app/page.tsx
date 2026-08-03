@@ -41,7 +41,7 @@ export default function Home() {
               className="block text-transparent outline-breathe"
               style={{ WebkitTextStroke: "1.5px rgba(255,255,255,0.25)" }}
             >
-              Soon
+              soon
             </span>
           </h1>
         </div>
