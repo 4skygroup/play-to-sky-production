@@ -23,7 +23,7 @@ export default function Header() {
             <div className="shrink-0 flex gap-6">
                 <Link href="/">
                     <Image
-                        src="logo-play-to-sky-production.png"
+                        src="/logo-play-to-sky-production.png"
                         alt="Logo Play to Sky Productions"
                         width={100}
                         height={60}
