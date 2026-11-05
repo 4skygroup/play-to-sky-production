@@ -56,7 +56,7 @@ export default function Contact() {
                     {/* CÔTÉ GAUCHE : Énorme Logo textuel centré verticalement */}
                     <div className="md:col-span-5 flex justify-center items-center p-4">
                         <Image
-                            src="https://playtoskyproductions.com/logo.png"
+                            src="/logo.png"
                             alt="Logo Play To Sky Production"
                             width={350}
                             height={150}
